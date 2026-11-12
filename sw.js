@@ -1,4 +1,4 @@
-const CACHE='natinf-route-v11-routiere';const ASSETS=['./','./index.html','./manifest.webmanifest','./icon.svg','./gyrophare.jpg','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./natinf-octobre2026.json'];
+const CACHE='natinf-route-v12-auto-update';const ASSETS=['./','./index.html','./manifest.webmanifest','./icon.svg','./gyrophare.jpg','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./natinf-octobre2026.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(caches.match(e.request).then(cached=>cached||fetch(e.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return response})))});
