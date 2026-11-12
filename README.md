@@ -1,1 +1,1 @@
-Version V26 : loupe de la rubrique Recherche legerement agrandie. Autres fonctionnalites conservees.
+NATINF Route V28. Toutes les améliorations réalisables dans cette PWA statique : présentation, mode sombre, recherche, historique, filtres indicatifs, raccourcis, coffre chiffré, tri tactile, renommage, copie, sauvegarde/restauration, réglages de texte et délai, hors ligne et mise à jour. Face ID n’est pas implémenté : il exige une intégration biométrique sécurisée, qui ne peut être simulée par une PWA statique. Les points non vérifiés restent « à vérifier ».
