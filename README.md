@@ -1,1 +1,1 @@
-NATINF Route — Design premium V3. Décompresser et publier les fichiers à la racine du site Netlify ou du dépôt GitHub. Les logos sont des interprétations graphiques et non des fichiers officiels. Référentiel NATINF non intégré : application de démonstration, ne pas utiliser comme base juridique de verbalisation. Les favoris sont stockés localement sur le téléphone.
+NATINF Route V5 — accueil avec gyrophare atténué et dégradé supérieur. Décompresser et publier tous les fichiers à la racine du site. Base NATINF non validée pour la verbalisation.
