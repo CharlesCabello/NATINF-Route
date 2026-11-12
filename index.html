@@ -1,1 +1,51 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101b2d"><link rel="manifest" href="manifest.webmanifest"><title>NATINF Route</title><style>body{margin:0;background:#f3f5f9;color:#17243b;font:16px -apple-system,BlinkMacSystemFont,Arial}header{background:#101b2d;color:white;padding:28px 18px 22px}h1{margin:0;font-size:27px}header p{color:#b9c5d7;margin-bottom:0}main{max-width:700px;margin:auto;padding:16px}input{width:100%;box-sizing:border-box;border:1px solid #cbd4e1;border-radius:14px;padding:16px;font-size:18px}nav{display:flex;gap:7px;overflow:auto;padding:13px 0}button{cursor:pointer;border:1px solid #d3dce8;background:white;border-radius:12px;padding:10px 12px;font-size:14px;white-space:nowrap}button.active{background:#172b4b;color:white}.item{background:white;padding:17px;border-radius:16px;margin:10px 0;box-shadow:0 2px 9px #172b4b0d}.code{font-size:25px;font-weight:800}.title{font-weight:650;margin:8px 0}.muted{font-size:13px;color:#627084}.actions{display:flex;justify-content:space-between;margin-top:12px}a{color:#245eaa}footer{font-size:12px;color:#59667b;padding:15px;line-height:1.5}.count{font-size:13px;color:#59667b}</style></head><body><header><h1>🛡 NATINF Route</h1><p>Recherche rapide · Police de la route</p></header><main><input id="q" placeholder="Infraction, NATINF, article…" autocomplete="off"><nav id="filters"></nav><div class="count" id="count"></div><div id="results"></div><footer>Références issues de la nomenclature NATINF. Vérifier systématiquement la qualification exacte, les circonstances et la version en vigueur avant verbalisation. Application indépendante, non officielle. Aucune donnée personnelle saisie ni transmise.</footer></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1729"><meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+<title>NATINF Route — Assistant terrain</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#172840;background:#f3f6fa}
+*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}
+header{background:linear-gradient(125deg,#081424,#183251);color:white;padding:24px max(18px,calc((100vw - 960px)/2)) 42px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:47px;height:47px;display:grid;place-items:center;border:1px solid #4a6788;border-radius:14px;background:#253f5d;font-size:26px}
+.brand strong{font-size:21px;letter-spacing:-.5px}.brand small{display:block;font-size:10px;letter-spacing:2px;color:#adc0d5;margin-top:3px}
+.pill{border:1px solid #506b88;border-radius:30px;padding:8px 10px;color:#c4d5e8;font-size:11px}
+.hero{padding-top:35px}.eyebrow{font-size:11px;letter-spacing:2px;color:#91c1fb;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(29px,5vw,43px);line-height:1.15;letter-spacing:-1.2px;margin:11px 0}
+.hero p{color:#b9c9dc;line-height:1.6;font-size:14px;max-width:480px;margin:0}
+main{max-width:1000px;margin:-18px auto 0;padding:0 18px 40px;position:relative}
+.search-card{background:#fff;padding:15px;border-radius:19px;border:1px solid #e3eaf2;box-shadow:0 14px 30px #10253b12}
+.search-wrap{display:flex;align-items:center;gap:10px;background:#f4f7fb;border:1px solid #e3eaf2;border-radius:13px;padding:0 13px}
+.search-icon{font-size:24px;color:#7187a1}input{width:100%;background:none;border:0;outline:0;padding:17px 0;font-size:16px;color:#172840}
+input::placeholder{color:#8393a7}.clear{border:0;background:none;color:#8293a6;font-size:22px}
+.shortcuts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.shortcut{border:1px solid #e1e8f0;background:white;color:#526982;border-radius:9px;padding:8px 11px;font-size:12px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:27px 0 12px}
+h2{font-size:19px;letter-spacing:-.5px;margin:0}.count{font-size:12px;color:#78889b}
+nav{display:flex;gap:8px;overflow-x:auto;padding:2px 0 13px;scrollbar-width:none}
+nav button{white-space:nowrap;border:1px solid #dce4ed;background:#fff;color:#576d85;border-radius:10px;padding:10px 13px;font-size:12px;font-weight:650}
+nav button.active{background:#102740;color:#fff;border-color:#102740}
+.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.item{display:flex;flex-direction:column;min-height:182px;background:#fff;border:1px solid #e2e9f1;border-radius:17px;padding:18px;box-shadow:0 3px 12px #19375508}
+.item-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.code{font-size:12px;font-weight:800;letter-spacing:.4px;color:#215d99;background:#eaf3fc;border-radius:7px;padding:7px 9px}
+.category{font-size:11px;color:#7b8ca1}.item h3{font-size:16px;line-height:1.4;margin:15px 0 8px;flex:1}
+.muted{font-size:11px;color:#8494a6}
+.actions{display:flex;gap:7px;border-top:1px solid #edf1f5;margin-top:15px;padding-top:12px}
+.actions button,.actions a{border:0;background:#f3f6fa;color:#344d69;border-radius:8px;padding:9px 10px;font-size:12px;font-weight:650;text-decoration:none}
+.actions button.saved{color:#ad791c;background:#fff5e4}.actions a{margin-left:auto}
+.empty{grid-column:1/-1;text-align:center;background:#fff;border:1px dashed #cbd6e3;border-radius:16px;padding:45px 20px;color:#718298;line-height:1.6}
+.notice{display:flex;gap:12px;background:#eaf0f7;color:#5f7288;border-radius:14px;padding:16px;margin-top:24px;font-size:12px;line-height:1.6}
+.notice strong{color:#213952}footer{text-align:center;color:#8b99a9;font-size:11px;margin-top:20px;line-height:1.5}
+#toast{display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#11243b;color:white;padding:11px 18px;border-radius:10px;font-size:13px;z-index:5}
+@media(max-width:650px){header{padding:20px 18px 42px}.hero{padding-top:27px}.results{grid-template-columns:1fr}.item{min-height:0}main{padding:0 14px 30px}}
+</style></head><body>
+<header><div class="top"><div class="brand"><div class="logo">🛡</div><div><strong>NATINF Route</strong><small>ASSISTANT TERRAIN</small></div></div><span class="pill">● Accès rapide</span></div>
+<div class="hero"><div class="eyebrow">Référentiel de recherche</div><h1>La bonne infraction.<br>En quelques secondes.</h1><p>Retrouvez rapidement un code NATINF ou une qualification liée à la police de la route.</p></div></header>
+<main><div class="search-card"><div class="search-wrap"><span class="search-icon">⌕</span><input id="q" aria-label="Rechercher une infraction" placeholder="Code NATINF, infraction, mot-clé…" autocomplete="off"><button id="clear" class="clear" aria-label="Effacer">×</button></div>
+<div class="shortcuts"><button class="shortcut" data-query="stop">STOP</button><button class="shortcut" data-query="téléphone">Téléphone</button><button class="shortcut" data-query="assurance">Assurance</button><button class="shortcut" data-query="feu rouge">Feu rouge</button></div></div>
+<div class="section-head"><h2>Infractions routières</h2><span id="count" class="count"></span></div><nav id="filters" aria-label="Catégories"></nav><section class="results" id="results" aria-live="polite"></section>
+<div class="notice"><span>ⓘ</span><div><strong>Information importante</strong><br>Répertoire initial non exhaustif. Qualifications abrégées. Vérifiez le code NATINF, la qualification exacte, les textes et leur version en vigueur dans les sources officielles avant toute procédure.</div></div>
+<footer>Application indépendante · Non officielle · Favoris enregistrés sur cet appareil</footer></main>
+<div id="toast" role="status"></div><script src="app.js"></script></body></html>
