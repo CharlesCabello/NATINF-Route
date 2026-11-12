@@ -1,1 +1,1 @@
-NATINF Route V35 — refonte graphique Premium V2 : en-tête, navigation, couleurs, cartes, fiches NATINF, affichage compact, animations et adaptation Police/Gendarmerie existante. Fonctions et données préservées depuis V34. Déployer tous les fichiers sur la même origine Netlify pour conserver les données locales.
+NATINF Route V36 : fenetre de suggestions pendant la saisie ; boutons Copier NATINF et Copier la fiche supprimes ; bouton Copier supprime du coffre ; un seul Renommer par commune. Donnees locales preservees.
