@@ -1,1 +1,1 @@
-NATINF Route V25. Dans À propos, version V25 en petit sous Charles CABELLO dans le même encadré POWERED BY. Encadré de version séparé supprimé. Autres fonctions V24 conservées. Déployer les fichiers à la racine du dépôt GitHub, sur le même domaine Netlify pour préserver les données locales.
+Version V26 : loupe de la rubrique Recherche legerement agrandie. Autres fonctionnalites conservees.
