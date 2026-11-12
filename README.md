@@ -1,1 +1,1 @@
-NATINF Route V29 : Accueil sans infractions fréquentes, Accès rapides renommé Dernier consulté, encadré de mise à jour NATINF compact sur Accueil, encadré supprimé des Favoris, version V29 affichée dans l’en-tête à droite du logo sur toutes les pages et retirée du titre Codes. Les autres fonctionnalités et clés de stockage local sont inchangées.
+NATINF Route V30 : Derniers consultés sur Accueil ; aucun historique sur Recherche ; ordre des favoris personnalisable et persistant ; encadré Paramètres dans À propos. Autres fonctions conservées.
