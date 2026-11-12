@@ -83,7 +83,7 @@ async function loadDatabase(){
 }
 const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const categories=[['Infractions courantes','🚦'],['Vitesse','🚘'],['Alcool','◉'],['Titres','▣'],['Assurance','⬡'],['Équipement','⚙'],['Téléphone','▯'],['Stupéfiants','•••']];
-let page='home',profile=null,query='',cat='',detail=null,favs=[];let pendingProfile=null,pinDigits='',pinError='';const ACCESS_PIN='2062';try{favs=JSON.parse(localStorage.getItem('natinf-favs')||'[]')}catch(e){}const main=document.getElementById('main'),nav=document.getElementById('nav');const profiles=[{key:'g',name:'Gendarmerie nationale',abbr:'GND',id:'NIJ GEND : 455 701'},{key:'p',name:'Police nationale',abbr:'PA',id:'Matricule : 7 149 583'}];
+let page='home',profile=null,query='',cat='',detail=null,favs=[];let pendingProfile=null,pinDigits='',pinError='',pinForCodes=false;const ACCESS_PIN='2062';try{favs=JSON.parse(localStorage.getItem('natinf-favs')||'[]')}catch(e){}const main=document.getElementById('main'),nav=document.getElementById('nav');const profiles=[{key:'g',name:'Gendarmerie nationale',abbr:'GND',id:'NIGEND : 455 701'},{key:'p',name:'Police nationale',abbr:'PA',id:'Matricule : 7 149 583'}];
 const gLogo=`<svg viewBox="0 0 210 72" role="img" aria-label="Identité graphique Gendarmerie nationale"><path d="M31 7 C12 25 35 33 23 49 C39 43 41 30 37 19 C47 30 46 44 32 54 C53 46 55 26 40 7 C42 22 30 24 31 7Z" fill="#0c3c83"/><circle cx="33" cy="60" r="6" fill="#0c3c83"/><text x="61" y="31" font-size="21" font-weight="800" fill="#0b3478" font-family="Arial,sans-serif">Gendarmerie</text><text x="64" y="51" font-size="16" font-weight="600" letter-spacing="4" fill="#0b3478" font-family="Arial,sans-serif">nationale</text><path d="M64 59 H112" stroke="#154fa8" stroke-width="5"/><path d="M115 59 H145" stroke="#fff" stroke-width="5"/><path d="M148 59 H177" stroke="#ed2939" stroke-width="5"/></svg>`;
 const pLogo=`<svg viewBox="0 0 210 72" role="img" aria-label="Identité graphique Police nationale"><path d="M12 45 Q28 24 29 9 L48 9 Q43 31 12 45Z" fill="#164fa9"/><path d="M27 53 Q49 33 49 9 L62 9 Q61 34 27 53Z" fill="#fff" stroke="#e4eaf3" stroke-width=".6"/><path d="M43 59 Q66 37 65 9 L78 9 Q77 38 43 59Z" fill="#e82a40"/><text x="80" y="34" font-size="25" font-style="italic" font-weight="900" fill="#0a244f" font-family="Arial,sans-serif">POLICE</text><text x="83" y="53" font-size="15" font-weight="800" letter-spacing="2" fill="#0a244f" font-family="Arial,sans-serif">NATIONALE</text></svg>`;
 function card(p){return `<button class="profile ${profile===p.key?'active':''}" data-profile="${p.key}" aria-pressed="${profile===p.key}"><span class="check">✓</span><div class="logo">${p.key==='g'?gLogo:pLogo}</div><div class="grade">${p.abbr}</div><div class="person">Charles CABELLO</div><div class="number">${p.id}</div></button>`}
@@ -94,12 +94,13 @@ function pinDialog(){
  overlay.innerHTML=`<div class="pin-dialog" role="dialog" aria-modal="true" aria-label="Saisir le code d'accès"><h2>Code d'accès</h2><p>Profil ${pendingProfile==='g'?'Gendarmerie nationale':'Police nationale'}<br>Saisissez votre code à 4 chiffres.</p><div class="pin-dots">${[0,1,2,3].map(i=>`<span class="pin-dot ${i<pinDigits.length?'filled':''}"></span>`).join('')}</div><div class="pin-keypad">${['1','2','3','4','5','6','7','8','9','','0','⌫'].map(n=>n?`<button type="button" data-pin="${n}" aria-label="${n==='⌫'?'Effacer':n}">${n}</button>`:'<span></span>').join('')}</div><p class="pin-error" role="alert">${pinError}</p><button type="button" class="pin-cancel" data-pin-cancel>Annuler</button></div>`;
  document.body.appendChild(overlay);
 }
-function beginProfile(k){if(k===profile&&page!=='home')return;pendingProfile=k;pinDigits='';pinError='';pinDialog()}
+function beginCodes(){if(!profile)return;pendingProfile=profile;pinForCodes=true;pinDigits='';pinError='';pinDialog()}
+function beginProfile(k){pinForCodes=false;if(k===profile&&page!=='home')return;pendingProfile=k;pinDigits='';pinError='';pinDialog()}
 function pinPress(k){
  if(k==='⌫'){pinDigits=pinDigits.slice(0,-1);pinError='';pinDialog();return}
  if(pinDigits.length>=4)return;pinDigits+=k;
  if(pinDigits.length===4){
-  if(pinDigits===ACCESS_PIN){lastActivity=Date.now();profile=pendingProfile;pendingProfile=null;pinDigits='';pinError='';document.getElementById('pin-overlay')?.remove();page='dashboard';cat='';query='';render();return}
+  if(pinDigits===ACCESS_PIN){lastActivity=Date.now();profile=pendingProfile;pendingProfile=null;pinDigits='';pinError='';document.getElementById('pin-overlay')?.remove();page=pinForCodes?'codes':'dashboard';pinForCodes=false;cat='';query='';render();return}
   pinDigits='';pinError='Code incorrect. Réessayez.'; 
  }
  pinDialog();
@@ -125,7 +126,7 @@ const IDLE_LIMIT_MS=2*60*1000;
 let lastActivity=Date.now();
 function logoutForInactivity(){
  if(!profile)return;
- profile=null;pendingProfile=null;pinDigits='';pinError='';page='home';query='';cat='';detail=null;
+ profile=null;pendingProfile=null;pinForCodes=false;pinDigits='';pinError='';page='home';query='';cat='';detail=null;
  lockVault();
  document.getElementById('pin-overlay')?.remove();
  render();
@@ -137,7 +138,7 @@ setInterval(checkIdle,1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkIdle()});
 window.addEventListener('pageshow',checkIdle);
 let onlyRoad=true,resultsLimit=60;
-function setPage(p){if(!profile&&p!=='home')page='home';else{page=p;if(p==='search'){cat='';resultsLimit=60}}render()}
+function setPage(p){if(p==='codes'&&profile){beginCodes();return}if(!profile&&p!=='home')page='home';else{page=p;if(p==='search'){cat='';resultsLimit=60}}render()}
 
 const FINE_SCHEDULE={1:{minor:'Non applicable',normal:'11 €',major:'33 €'},2:{minor:'22 €',normal:'35 €',major:'75 €'},3:{minor:'45 €',normal:'68 €',major:'180 €'},4:{minor:'90 €',normal:'135 €',major:'375 €'}};
 // Correspondances NATINF strictement identifiées ; ne pas extrapoler aux personnes seulement redevables de l’amende.
@@ -177,7 +178,7 @@ function render(){
  if(page==='codes'){
   const service=profile==='g'?'Gendarmerie nationale':'Police nationale';
   const place=profile==='g'?'CASSIS':'BMSRD';
-  main.innerHTML=top+`<h2 class="dash-title">Codes d’accès</h2><p class="muted dash-sub">${escapeHtml(service)}</p><section class="code-entry simple-code"><h3>${escapeHtml(place)}</h3><div class="simple-code-row"><strong>Portail</strong><span>À renseigner</span></div></section><p class="muted" style="font-size:12px;line-height:1.6;margin-top:15px">Les codes d’accès réels ne sont pas inclus dans les fichiers publics de l’application. Cette rubrique présente les emplacements associés à votre profil.</p>`;
+  main.innerHTML=top+`<h2 class="dash-title">Codes d’accès</h2><p class="muted dash-sub">${escapeHtml(service)}</p><section class="code-entry simple-code"><h3>${escapeHtml(place)}</h3><div class="simple-code-row"><strong>Portail</strong><span>Accès à configurer</span></div></section><p class="muted" style="font-size:12px;line-height:1.6;margin-top:15px">Code du portail à récupérer depuis un stockage sécurisé. Le PIN de session ne protège pas les fichiers publics du site.</p>`;
   return;
  }
  if(page==='about'){main.innerHTML=top+`<h2>À propos</h2><div class="powered-by"><span>POWERED BY</span><strong>Charles CABELLO</strong></div><div class="detail"><h3>NATINF Route</h3><p>Référentiel importé : <strong>${escapeHtml(dbMeta.sourceTitle)}</strong>.</p><p>${count.toLocaleString('fr-FR')} références issues du fichier fourni. La rubrique Route utilise un classement indicatif par mots-clés ; la recherche « Tous les NATINF » couvre l’ensemble du fichier.</p><p>Les favoris sont conservés lors des mises à jour sur la même origine Netlify (sans effacer les données Safari). La base est enregistrée dans les fichiers de l’application et mise en cache pour consultation hors ligne après le premier chargement complet.</p><p>La nomenclature ne contient ni montants individualisés ni retraits de points. Les retraits de points vérifiés sont ajoutés pour une sélection de NATINF, sans extrapolation. Vérifiez les textes en vigueur et la situation juridique avant toute verbalisation.</p><button class="button" data-page="home">Changer de profil</button></div>${status}`;return}
@@ -190,7 +191,7 @@ function render(){
 }
 document.addEventListener('click',e=>{
  const key=e.target.closest('[data-pin]');if(key){pinPress(key.dataset.pin);return}
- if(e.target.closest('[data-pin-cancel]')){pendingProfile=null;pinDigits='';pinError='';pinDialog();return}
+ if(e.target.closest('[data-pin-cancel]')){pendingProfile=null;pinForCodes=false;pinDigits='';pinError='';pinDialog();return}
  checkIdle();if(!profile&&page!=='home')return;
  const b=e.target.closest('[data-profile],[data-page],[data-cat],[data-fav],[data-detail],[data-copy],[data-scope],[data-all],[data-more],[data-update],[data-save-code],[data-clear-code],[data-reveal-code],[data-unlock-vault],[data-lock-vault]');
  if(!b)return;
