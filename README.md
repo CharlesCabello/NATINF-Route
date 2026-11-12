@@ -1,1 +1,1 @@
-NATINF Route V34 - Parametres : bouton enregistrer sous le delai de deconnexion ; statut de connexion et bouton Se deconnecter cote a cote ; verification des mises a jour en dernier.
+NATINF Route V35 — refonte graphique Premium V2 : en-tête, navigation, couleurs, cartes, fiches NATINF, affichage compact, animations et adaptation Police/Gendarmerie existante. Fonctions et données préservées depuis V34. Déployer tous les fichiers sur la même origine Netlify pour conserver les données locales.

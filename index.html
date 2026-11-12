@@ -40,7 +40,73 @@ body:has(nav:not([hidden])) .body{padding-bottom:115px}
 .pin-dialog::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(to right,#16458a 0 33.333%,#fff 33.333% 66.666%,#e63c42 66.666% 100%);border-bottom:1px solid rgba(20,50,85,.09)}
 .pin-security{display:flex;align-items:center;justify-content:center;gap:7px;margin:12px auto 8px;color:#31577c;font-size:12px;font-weight:600;letter-spacing:.01em}
 .pin-security svg{width:16px;height:16px;stroke:#31577c;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.settings-card{margin-top:16px;margin-bottom:16px;background:#fff}.settings-card .save-settings{display:block;width:100%;margin-top:16px;background:#164c88;color:white;font-weight:700}.dark-app .settings-card{background:#192a40;border-color:#405b7c}.connection-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:15px 0}.connection-actions #online-status{margin:0}.logout-settings{width:auto!important;white-space:nowrap;padding:10px 12px!important}.check-update-settings{margin-top:10px;width:100%}</style><style>
+.settings-card{margin-top:16px;margin-bottom:16px;background:#fff}.settings-card .save-settings{display:block;width:100%;margin-top:16px;background:#164c88;color:white;font-weight:700}.dark-app .settings-card{background:#192a40;border-color:#405b7c}.connection-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:15px 0}.connection-actions #online-status{margin:0}.logout-settings{width:auto!important;white-space:nowrap;padding:10px 12px!important}.check-update-settings{margin-top:10px;width:100%}
+/* V35 — refonte graphique premium, sans modification des données ni des fonctions */
+:root{--ui-navy:#091f43;--ui-blue:#1455a0;--ui-accent:#2c87df;--ui-line:#dfe7f1;--ui-soft:#f3f7fc;--ui-radius:17px}
+html{-webkit-tap-highlight-color:transparent}
+body{background:linear-gradient(145deg,#dce6f3,#f1f5fb 55%,#dce7f4)}
+.app{background:#f8fafd;box-shadow:0 0 55px #0a254626}
+.flag{height:5px}
+header{padding:18px 18px 16px;background:linear-gradient(180deg,#fff,#f9fbff);border-bottom:1px solid #e0e9f4;box-shadow:0 4px 18px #112d5009}
+header h1{font-size:25px;letter-spacing:-.8px;font-weight:850;display:flex;align-items:center;justify-content:center;gap:5px}
+.brandroad{font-size:26px;margin-right:5px;color:#1455a0}
+header small{font-size:9px;letter-spacing:1.5px;color:#657b96;margin-top:7px}
+.header-version{font-size:10px!important;font-weight:750!important;letter-spacing:.3px!important;color:#6c819b!important;background:#eaf0f8;padding:4px 7px;border:1px solid #dce5f1;border-radius:7px;align-self:center}
+.body{padding:20px 17px 112px}
+.dash-title{font-size:25px!important;font-weight:820;letter-spacing:-.7px;color:#102c53}
+.dash-sub{font-size:12.5px;line-height:1.55;color:#6a7d94}
+.sectiontitle{font-size:16px;letter-spacing:-.25px;font-weight:790;color:#18365d}
+.profile,.cat,.item,.detail,.settings-card,.commune-card{border-radius:var(--ui-radius);border-color:var(--ui-line);box-shadow:0 5px 20px #183a630b;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.profile{background:linear-gradient(155deg,#fff,#f0f5fc);border-width:1px}
+.profile.active{background:linear-gradient(155deg,#1a5ca5,#0b2a59);box-shadow:0 12px 25px #0c39733d}
+.profile:active,.cat:active,.item:active{transform:scale(.986)}
+.cat{background:linear-gradient(145deg,#fff,#f3f7fd);min-height:105px!important;padding:14px 9px;border:1px solid #e0e9f3}
+.cat.selected{background:#e8f2ff;border-color:#87b8ed;box-shadow:0 6px 18px #1c67bd20}
+.cat span{font-size:27px}
+.item{padding:12px 13px;margin:8px 0;background:#fff;align-items:center;gap:9px}
+.item strong{font-size:13.5px;line-height:1.4;letter-spacing:-.1px;color:#142e51}
+.item small{font-size:11.5px;color:#687f9a;line-height:1.4}
+.itemmain{min-width:0}
+.tag{background:#eaf2fd;color:#23548d;border:1px solid #d8e7f8;font-size:10.5px;font-weight:650;border-radius:8px}
+.star{color:#b2bfd0;transition:transform .18s,color .18s}
+.star.on{color:#e7a72a}
+.star:active{transform:scale(1.22)}
+.search{border-radius:14px;border:1px solid #d2e0f0;background:#fff;box-shadow:0 4px 16px #102b520b;padding:13px 14px;outline-offset:2px}
+.search:focus{border-color:#5d9fdf;box-shadow:0 0 0 3px #2e85db1a}
+.button{background:linear-gradient(155deg,#1b5aab,#113c7d);border-radius:12px;padding:12px 16px;box-shadow:0 4px 12px #0d3b7722;transition:filter .16s,transform .16s}
+.button:active{transform:scale(.98);filter:brightness(.95)}
+.detail{background:#fff;padding:18px}
+.detail h2{font-size:21px;line-height:1.28;letter-spacing:-.4px}
+.detail p{line-height:1.6}
+.natinf-number{display:inline-block;font-weight:800;letter-spacing:.35px;color:#1555a3;background:#edf5ff;border:1px solid #d9e9fc;padding:6px 10px;border-radius:9px;margin-bottom:10px}
+.settings-card{background:linear-gradient(160deg,#fff,#f5f8fe);padding:18px 16px!important;border:1px solid #dfe8f4}
+.settings-card h3{font-size:18px;letter-spacing:-.4px}
+.settings-card select{border-radius:10px;background:#fff;border:1px solid #d8e3f1}
+.pin-dialog{border-radius:23px;box-shadow:0 24px 70px #071c3e77;border:1px solid #e6edf7}
+.pin-keypad button{border-radius:13px;box-shadow:0 2px 8px #142d4e08}
+.pin-keypad button:active{background:#dbeafe}
+nav:not([hidden]){background:linear-gradient(180deg,#0b2247,#06142f);box-shadow:0 -7px 25px #061a3926;border-top:1px solid #29415e;padding-top:10px}
+nav:not([hidden]) button{transition:color .16s ease,transform .16s ease;min-height:53px;gap:4px}
+nav:not([hidden]) button .navicon{font-size:26px!important;line-height:28px!important;display:block}
+nav:not([hidden]) button[data-page="search"] .navicon{font-size:31px!important}
+nav:not([hidden]) button.on{color:#7bc7ff}
+nav:not([hidden]) button.on:after{background:#51aef8;height:3px;bottom:1px;width:44%;left:28%}
+nav:not([hidden]) button:active{transform:translateY(1px)}
+.favorite-order button{background:#eef4fd;border-color:#d8e4f4;border-radius:9px}
+.home-update{border-radius:13px}
+.recent-pill{border-radius:11px}
+@media(max-width:370px){header h1{font-size:23px}.body{padding-left:13px;padding-right:13px}.item{padding:11px}}
+@media(prefers-reduced-motion:reduce){.profile,.cat,.item,.button,.star,nav button{transition:none!important}}
+body.theme-dark .app{background:#0c1728}
+body.theme-dark header{background:linear-gradient(180deg,#132742,#0e2037);border-color:#29445e}
+body.theme-dark header h1,body.theme-dark .dash-title,body.theme-dark .sectiontitle{color:#e8f1ff}
+body.theme-dark .header-version{background:#263d58;color:#c6d8ed!important;border-color:#3b526e}
+body.theme-dark .item strong{color:#e8f1ff}
+body.theme-dark .item,body.theme-dark .detail,body.theme-dark .settings-card,body.theme-dark .cat{background:#172b44!important;border-color:#35516e!important}
+body.theme-dark .tag,body.theme-dark .natinf-number{background:#223f61;color:#b8d9ff;border-color:#3c5c7f}
+body.theme-dark .search{background:#1a304b;color:#f3f7ff;border-color:#3d5875}
+body.theme-dark .item small{color:#aec1d8}
+</style><style>
 nav button{flex:1;min-width:0;padding:5px 2px;font-size:10px;white-space:nowrap}nav:not([hidden]) button .navicon{font-size:25px;line-height:28px;display:block;margin-bottom:3px}
 .powered-by{background:linear-gradient(125deg,#071a3c,#164d93);color:#fff;border-radius:18px;padding:23px 18px;text-align:center;margin:12px 0 20px;box-shadow:0 8px 20px #0d2c5522}.powered-by span{display:block;font-size:11px;letter-spacing:3px;color:#a9c5eb;font-weight:750}.powered-by strong{display:block;margin-top:8px;font-size:23px;letter-spacing:.3px}
 .codes-empty{background:#fff;border:1px solid #dce5f1;border-radius:18px;text-align:center;padding:34px 19px;margin-top:18px}.codes-symbol{font-size:43px}.codes-empty h3{margin:13px 0 8px;color:#0b2c5b}.codes-empty p{font-size:13px;line-height:1.55}.codes-empty .muted{max-width:300px;margin:12px auto}
@@ -60,7 +126,7 @@ nav button{flex:1;min-width:0;padding:5px 2px;font-size:10px;white-space:nowrap}
 .home-update strong{font-size:12px}.home-update small{font-size:10px;color:#5a7290;line-height:1.25}
 .home-update button{white-space:nowrap;border:1px solid #b9d0eb;border-radius:8px;background:white;color:#154e92;padding:7px 9px;font-size:11px;font-weight:700}
 @media(prefers-color-scheme:dark){.header-version{background:#263e5b;color:#eaf2fc;border-color:#4d6580}.home-update{background:#203550;color:#eaf2fc;border-color:#425e7d}.home-update small{color:#c0cfe2}}
-</style></head><body><div class="app"><div class="flag"><i></i><i></i><i></i></div><header><h1><span class="brandroad">◢</span>NATINF Route <span class="header-version">V34</span></h1><small>INFRACTIONS ROUTIÈRES · AIDE À LA RECHERCHE</small></header><main class="body" id="main"></main><nav id="nav" hidden></nav></div><script>
+</style></head><body><div class="app"><div class="flag"><i></i><i></i><i></i></div><header><h1><span class="brandroad">◢</span>NATINF Route <span class="header-version">V35</span></h1><small>INFRACTIONS ROUTIÈRES · AIDE À LA RECHERCHE</small></header><main class="body" id="main"></main><nav id="nav" hidden></nav></div><script>
 const records=[];let databaseReady=false,databaseError=false;
 const DB_KEY='natinf-route-database-v12',DB_META='natinf-route-database-meta-v12';
 const DATASET_URL='https://www.data.gouv.fr/api/1/datasets/liste-des-infractions-en-vigueur-de-la-nomenclature-natinf/';
@@ -227,7 +293,7 @@ function render(){
   filterCodeCards();
   return;
  }
- if(page==='about'){main.innerHTML=top+`<h2>À propos</h2><div class="powered-by"><span>POWERED BY</span><strong>Charles CABELLO</strong><span class="about-inline-version">Version V34</span></div><div class="detail"><h3>NATINF Route</h3><p>Référentiel importé : <strong>${escapeHtml(dbMeta.sourceTitle)}</strong>.</p><p>${count.toLocaleString('fr-FR')} références issues du fichier fourni. La rubrique Route utilise un classement indicatif par mots-clés ; la recherche « Tous les NATINF » couvre l’ensemble du fichier.</p><p>Les favoris sont conservés lors des mises à jour sur la même origine Netlify (sans effacer les données Safari). La base est enregistrée dans les fichiers de l’application et mise en cache pour consultation hors ligne après le premier chargement complet.</p><p>La nomenclature ne contient ni montants individualisés ni retraits de points. Les retraits de points vérifiés sont ajoutés pour une sélection de NATINF, sans extrapolation. Vérifiez les textes en vigueur et la situation juridique avant toute verbalisation.</p></div><section class="settings-card"><h3>Paramètres</h3><div class="setting"><label>Apparence</label><select id="pref-theme"><option value="auto" ${editPrefs().theme==='auto'?'selected':''}>Automatique</option><option value="light" ${editPrefs().theme==='light'?'selected':''}>Clair</option><option value="dark" ${editPrefs().theme==='dark'?'selected':''}>Sombre</option></select></div><div class="setting"><label>Taille du texte</label><select id="pref-scale">${[100,110,120].map(n=>`<option value="${n}" ${editPrefs().scale===n?'selected':''}>${({100:'Petit',110:'Moyen',120:'Grand'})[n]}</option>`).join('')}</select></div><div class="setting"><label>Déconnexion après</label><select id="pref-idle">${[[60,'1 minute'],[120,'2 minutes'],[300,'5 minutes']].map(([n,l])=>`<option value="${n}" ${editPrefs().idle===n?'selected':''}>${l}</option>`).join('')}</select></div><button class="button save-settings" data-save-settings>Enregistrer les paramètres</button><p class="muted" id="settings-message" role="status"></p><div class="connection-actions"><p id="online-status" class="muted">${navigator.onLine?'<span class="connection-dot online">●</span> Connecté':'<span class="connection-dot offline">●</span> Hors ligne'}</p><button class="button logout-settings" data-page="home">Se déconnecter</button></div><button class="button check-update-settings" data-check-app>↻ Vérifier la mise à jour de l’application</button></section>${status}`;return}
+ if(page==='about'){main.innerHTML=top+`<h2>À propos</h2><div class="powered-by"><span>POWERED BY</span><strong>Charles CABELLO</strong><span class="about-inline-version">Version V35</span></div><div class="detail"><h3>NATINF Route</h3><p>Référentiel importé : <strong>${escapeHtml(dbMeta.sourceTitle)}</strong>.</p><p>${count.toLocaleString('fr-FR')} références issues du fichier fourni. La rubrique Route utilise un classement indicatif par mots-clés ; la recherche « Tous les NATINF » couvre l’ensemble du fichier.</p><p>Les favoris sont conservés lors des mises à jour sur la même origine Netlify (sans effacer les données Safari). La base est enregistrée dans les fichiers de l’application et mise en cache pour consultation hors ligne après le premier chargement complet.</p><p>La nomenclature ne contient ni montants individualisés ni retraits de points. Les retraits de points vérifiés sont ajoutés pour une sélection de NATINF, sans extrapolation. Vérifiez les textes en vigueur et la situation juridique avant toute verbalisation.</p></div><section class="settings-card"><h3>Paramètres</h3><div class="setting"><label>Apparence</label><select id="pref-theme"><option value="auto" ${editPrefs().theme==='auto'?'selected':''}>Automatique</option><option value="light" ${editPrefs().theme==='light'?'selected':''}>Clair</option><option value="dark" ${editPrefs().theme==='dark'?'selected':''}>Sombre</option></select></div><div class="setting"><label>Taille du texte</label><select id="pref-scale">${[100,110,120].map(n=>`<option value="${n}" ${editPrefs().scale===n?'selected':''}>${({100:'Petit',110:'Moyen',120:'Grand'})[n]}</option>`).join('')}</select></div><div class="setting"><label>Déconnexion après</label><select id="pref-idle">${[[60,'1 minute'],[120,'2 minutes'],[300,'5 minutes']].map(([n,l])=>`<option value="${n}" ${editPrefs().idle===n?'selected':''}>${l}</option>`).join('')}</select></div><button class="button save-settings" data-save-settings>Enregistrer les paramètres</button><p class="muted" id="settings-message" role="status"></p><div class="connection-actions"><p id="online-status" class="muted">${navigator.onLine?'<span class="connection-dot online">●</span> Connecté':'<span class="connection-dot offline">●</span> Hors ligne'}</p><button class="button logout-settings" data-page="home">Se déconnecter</button></div><button class="button check-update-settings" data-check-app>↻ Vérifier la mise à jour de l’application</button></section>${status}`;return}
  if(page==='dashboard'){main.innerHTML=top+`<h2 class="dash-title">Accueil</h2><p class="muted dash-sub">Recherche rapide des infractions routières</p>${databaseReady?`<div class="home-update"><div><strong>Base NATINF</strong><small>${records.length.toLocaleString('fr-FR')} références · ${escapeHtml(dbMeta.sourceTitle)}</small></div><button data-update="1" ${updateState==='loading'?'disabled':''}>${updateState==='loading'?'…':'↻ Actualiser'}</button></div>`:status}<div class="recent-box"><h3>Derniers consultés</h3><div class="recent-row">${recentCards()||'<span class="muted">Tes dernières consultations apparaîtront ici.</span>'}</div></div><div class="categories dashboard-categories">${categories.map(([n,ic])=>`<button class="cat" data-cat="${escapeHtml(n)}" data-go-search="1"><span>${ic}</span>${n==='Téléphone'?'Téléphone<br>au volant':escapeHtml(n)}</button>`).join('')}</div><button class="button all-natinf" data-all="1">Voir toutes les infractions routières (${count.toLocaleString('fr-FR')})</button>`;return}
  const q=normalizeText(query.trim());
  let list=records.filter(r=>(page!=='favorites'||favs.includes(r.id))&&(!onlyRoad||page==='favorites'||r.road)&&(!cat||cat==='Infractions courantes'||r.cat===cat)&&(!q||normalizeText(r.id+' '+r.title+' '+r.nature+' '+r.defined+' '+r.punished).includes(q)));
