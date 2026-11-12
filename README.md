@@ -1,1 +1,1 @@
-NATINF Route V36 : fenetre de suggestions pendant la saisie ; boutons Copier NATINF et Copier la fiche supprimes ; bouton Copier supprime du coffre ; un seul Renommer par commune. Donnees locales preservees.
+NATINF Route V37 : étoile favoris en haut à droite des fiches NATINF ; Mode modification ; Supprimer la rubrique ; taille Très petit. Fonctions et stockage conservés.
