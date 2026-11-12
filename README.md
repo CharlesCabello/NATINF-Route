@@ -1,1 +1,0 @@
-NATINF Route V22 — version affichée dans À propos et Codes. Accès Codes sans second PIN de session ; coffre chiffré avec phrase secrète ; flèches de réorganisation ; déconnexion après 2 minutes. Déployer sur le même site Netlify et ne pas effacer les données locales.
