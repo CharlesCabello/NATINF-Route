@@ -1,1 +1,1 @@
-NATINF Route V30 : Derniers consultés sur Accueil ; aucun historique sur Recherche ; ordre des favoris personnalisable et persistant ; encadré Paramètres dans À propos. Autres fonctions conservées.
+NATINF Route V31 - Bouton Se deconnecter et indicateur de connexion vert dans A propos.
