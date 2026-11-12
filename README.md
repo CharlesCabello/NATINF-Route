@@ -1,1 +1,1 @@
-NATINF Route V37 : étoile favoris en haut à droite des fiches NATINF ; Mode modification ; Supprimer la rubrique ; taille Très petit. Fonctions et stockage conservés.
+NATINF Route V38: etoile de favori sans bordure, sans ombre, fond blanc sur la fiche NATINF. Toutes les autres fonctionnalites inchangees.
