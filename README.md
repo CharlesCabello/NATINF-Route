@@ -1,1 +1,3 @@
 NATINF Route V39 — mises à jour automatiques. Publier index.html, sw.js et tous les autres fichiers du ZIP à la racine du même site Netlify. Lorsqu'une nouvelle version est déployée, le navigateur vérifie sw.js au lancement, au retour au premier plan et à la reconnexion, puis recharge l'interface quand le nouveau service worker prend le contrôle. iOS ne permet pas de mises à jour en arrière-plan lorsque la PWA est fermée. Les favoris, paramètres et coffres restent dans le stockage local du même domaine ; ne pas effacer les données du site.
+
+V5.1 : Carnet d’intervention sur l’accueil, notes horodatées et chiffrées localement par profil avec phrase secrète indépendante. Publication manuelle requise tant que GitHub refuse les écritures.
