@@ -41,7 +41,7 @@ body:has(nav:not([hidden])) .body{padding-bottom:115px}
 .pin-security{display:flex;align-items:center;justify-content:center;gap:7px;margin:12px auto 8px;color:#31577c;font-size:12px;font-weight:600;letter-spacing:.01em}
 .pin-security svg{width:16px;height:16px;stroke:#31577c;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .settings-card{margin-top:16px;margin-bottom:16px;background:#fff}.settings-card .save-settings{display:block;width:100%;margin-top:16px;background:#164c88;color:white;font-weight:700}.dark-app .settings-card{background:#192a40;border-color:#405b7c}.connection-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:15px 0}.connection-actions #online-status{margin:0}.logout-settings{width:auto!important;white-space:nowrap;padding:10px 12px!important}.check-update-settings{margin-top:10px;width:100%}
-/* V5.6 — refonte graphique premium, sans modification des données ni des fonctions */
+/* V5.7 — refonte graphique premium, sans modification des données ni des fonctions */
 :root{--ui-navy:#091f43;--ui-blue:#1455a0;--ui-accent:#2c87df;--ui-line:#dfe7f1;--ui-soft:#f3f7fc;--ui-radius:17px}
 html{-webkit-tap-highlight-color:transparent}
 body{background:linear-gradient(145deg,#dce6f3,#f1f5fb 55%,#dce7f4)}
@@ -120,20 +120,20 @@ body.theme-dark .natinf-suggestion-popup{background:#172b44;border-color:#42678d
 body.theme-dark .natinf-suggestion-popup button{color:#e5f0ff;border-color:#38516e}
 body.theme-dark .suggestion-id{color:#8dc5ff}
 
-/* V5.6 : favori positionné en haut à droite de la fiche NATINF */
+/* V5.7 : favori positionné en haut à droite de la fiche NATINF */
 .natinf-detail{position:relative}
 .natinf-detail .detail-fav{position:absolute;top:13px;right:13px;z-index:2;display:flex;align-items:center;justify-content:center;width:43px;height:43px;min-width:43px;border-radius:0;border:none;background:transparent;font-size:29px;line-height:1;color:#a7b8cc;box-shadow:none}
 .natinf-detail .detail-fav.on{color:#e4a82a;background:#fff8e9;border-color:#f3dba3}
 .natinf-detail .natinf-number{max-width:calc(100% - 60px);box-sizing:border-box}
 body.theme-dark .natinf-detail .detail-fav{background:transparent;border-color:transparent}
 
-/* V5.6 — Carnet d'intervention chiffré */
+/* V5.7 — Carnet d'intervention chiffré */
 .mc-card{margin:14px 0;background:#fff;border:1px solid #dce6f1;border-radius:16px;padding:15px;box-shadow:0 4px 18px #153c6c0b}
 .mc-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.mc-head h3{margin:0;font-size:15px;color:#14345b}.mc-sub{color:#74869c;font-size:11px;margin:5px 0 12px}.mc-count{font-size:11px;background:#edf4ff;color:#285383;border-radius:12px;padding:5px 9px}
 .mc-feed{max-height:265px;overflow:auto;display:grid;gap:10px;margin:12px 0}.mc-entry{border-left:3px solid #d7e2f1;padding:2px 0 3px 11px}.mc-meta{font-size:10px;color:#8c99a9;margin-bottom:4px}.mc-entry-text{font-size:13px;color:#253a55;white-space:pre-wrap;overflow-wrap:anywhere}.mc-controls{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.mc-kind{border:1px solid #d5e1ef;background:#f6f9fd;color:#385675;border-radius:16px;padding:7px 10px;font-size:11px}.mc-kind.active{background:#164c8d;border-color:#164c8d;color:#fff}.mc-input{width:100%;box-sizing:border-box;min-height:64px;border:1px solid #cbd8e8;border-radius:11px;padding:11px;font:inherit;font-size:13px;resize:vertical;background:#fff;color:#1b344e}.mc-pass{width:100%;box-sizing:border-box;border:1px solid #cbd8e8;border-radius:10px;padding:11px;margin:5px 0 9px;background:#fff;color:#1b344e}.mc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.mc-action{border:1px solid #d2e0ef;background:#f4f8fe;color:#214c7b;border-radius:10px;padding:10px 12px;font-size:12px;font-weight:700;cursor:pointer}.mc-action.primary{background:#174c89;color:white;border-color:#174c89;flex:1}.mc-hint{font-size:10px;color:#7d8fa4;line-height:1.5;margin-top:9px}.mc-error{font-size:12px;color:#aa3646;margin:7px 0}.mc-session{font-size:11px;color:#54718f;margin-top:10px}.mc-empty{font-size:12px;color:#8293a7;padding:12px 0}
 body.theme-dark .mc-card{background:#172b44;border-color:#35516e}body.theme-dark .mc-head h3,body.theme-dark .mc-entry-text{color:#e8f1ff}body.theme-dark .mc-input,body.theme-dark .mc-pass{background:#102239;color:#f0f6ff;border-color:#35516e}body.theme-dark .mc-kind,body.theme-dark .mc-action{background:#233c59;color:#dceaff;border-color:#3a5674}body.theme-dark .mc-kind.active,body.theme-dark .mc-action.primary{background:#2363a9;color:white}
 
-/* V5.6 — accueil généraliste, suivi des vacations et saisie rapide */
+/* V5.7 — accueil généraliste, suivi des vacations et saisie rapide */
 .car-nav,.door-nav{width:25px;height:25px;display:block;margin:auto}
 #nav button[data-page="search"] .navicon,#nav button:nth-child(2) .navicon{font-size:25px;display:flex;justify-content:center;align-items:center}
 .vac-card{background:linear-gradient(150deg,#fff,#f5f9ff);border:1px solid #dce6f3;border-radius:18px;padding:19px;margin:14px 0 16px;box-shadow:0 5px 22px #17365a0d}
@@ -159,10 +159,10 @@ body.theme-dark .vac-grid>div{background:#1b3049;border-color:#34465f}
 body.theme-dark .vac-grid small,body.theme-dark .vac-service{color:#9cacc0}
 
 
-/* V5.6 vacation théorique */
+/* V5.7 vacation théorique */
 .vac-modal{position:fixed;inset:0;z-index:9999;background:#0c1d36a8;display:flex;align-items:center;justify-content:center;padding:18px}.vac-dialog{background:#fff;color:#17365a;border-radius:20px;padding:23px;width:min(100%,440px);box-shadow:0 20px 60px #0004}.vac-dialog h2{margin:8px 0;font-size:22px}.vac-dialog label{display:block;font-size:12px;font-weight:700;margin:14px 0 6px}.vac-dialog input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #cbd7e5;border-radius:10px;background:#fff;color:#17365a;font:inherit;font-size:15px;margin-top:6px}.vac-times{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vac-skip{display:block;width:100%;margin-top:10px;padding:12px;border:0;background:transparent;color:#496987;font-weight:700;cursor:pointer}.vac-month{margin:20px 0}.vac-month h4{margin-bottom:8px;text-transform:capitalize}.vac-history-row>div:last-child{text-align:right}.vac-history-row small{display:block;margin-top:4px;color:#8090a3}.vac-history-page .vac-grid{margin:12px 0}.vac-pill.active{background:#e0f1ff;color:#155d91}body.theme-dark .vac-dialog{background:#172b44;color:#edf3fb}body.theme-dark .vac-dialog input{background:#203b59;color:#edf3fb;border-color:#45617e}
 
-/* V5.6 : champs horaires compacts et sans débordement */
+/* V5.7 : champs horaires compacts et sans débordement */
 .vac-dialog{box-sizing:border-box;max-width:calc(100vw - 36px)}
 .vac-times{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;min-width:0;width:100%}
 .vac-times label{min-width:0;max-width:100%;box-sizing:border-box}
@@ -172,7 +172,7 @@ html,body{touch-action:pan-x pan-y}
 .vac-history-page .vac-month{margin:14px 0}
 .vac-history-page .vac-history-row{gap:10px}
 
-/* TACTIK V5.6 — horaires lisibles et vacation compacte */
+/* TACTIK V5.7 — horaires lisibles et vacation compacte */
 .vac-times{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:16px!important}
 .vac-times label{min-width:0!important;overflow:hidden;font-size:11px!important}
 .vac-times input[type="time"]{font-size:12px!important;letter-spacing:-.5px!important;padding:8px 2px!important;min-width:0!important;max-width:100%!important}
@@ -189,6 +189,36 @@ html,body{touch-action:pan-x pan-y}
 .vac-compact-edit{border:0;background:transparent;color:#1c63a0;font-size:11px;font-weight:700;padding:5px;cursor:pointer}
 .vac-compact-history{font-size:11px!important;padding:6px 0 0!important;margin-top:4px!important;text-align:left!important}
 body.theme-dark .vac-compact-line{color:#a9b9ce}
+
+/* V5.7 : rythmes harmonises et historique de vacations */
+.about-layout{display:flex;flex-direction:column;gap:16px}
+.about-layout>h2{margin:0 0 2px;font-size:23px}
+.about-layout>.powered-by,.about-layout>.detail,.about-layout>.settings-card{margin:0!important}
+.about-layout>.detail,.about-layout>.settings-card{border-radius:16px}
+.about-layout>.detail h3,.about-layout>.settings-card h3{margin:0 0 12px}
+.about-layout>.detail p{line-height:1.55}
+.vac-history-page{padding:17px 15px!important}
+.vac-history-heading h3{margin:0 0 5px!important;font-size:16px}
+.vac-history-heading p{margin:0!important;font-size:11px}
+.vac-history-page .vac-grid{margin:14px 0 8px!important}
+.vac-history-page .vac-month{margin:0!important;padding-top:15px}
+.vac-month-heading{display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-bottom:1px solid #e4e9f0;padding-bottom:9px}
+.vac-month-heading h4{margin:0!important;font-size:13px;text-transform:capitalize}
+.vac-month-heading span{font-size:11px;color:#77869b;white-space:nowrap}
+.vac-month-list{width:100%}
+.vac-history-page .vac-history-row{display:grid;grid-template-columns:minmax(0,1fr) auto 30px;align-items:center;gap:10px;margin:0;padding:11px 0;border:0;border-bottom:1px solid #e8edf3;background:transparent}
+.vac-history-page .vac-history-row:last-child{border-bottom:0}
+.vac-history-info{min-width:0}
+.vac-history-info strong{display:block;font-size:12px}
+.vac-history-info small{display:block;font-size:11px;line-height:1.35;color:#78869b;margin-top:3px;overflow-wrap:anywhere}
+.vac-history-times{text-align:right;font-size:11px;white-space:nowrap}
+.vac-history-times span{display:block;color:#6c7b90}
+.vac-history-times strong{display:block;font-size:12px;margin-top:4px}
+.vac-delete{width:30px;height:34px;display:flex;align-items:center;justify-content:center;border:0;background:transparent;color:#a5aebd;border-radius:8px;cursor:pointer}
+.vac-delete:active,.vac-delete:focus-visible{color:#b92c3e;background:#fff0f1}
+.vac-history-empty{font-size:12px;color:#77869b;margin:16px 0}
+.vac-history-page>.vac-hint{border-top:1px solid #e8edf3;padding-top:12px;margin:10px 0 0}
+body.theme-dark .vac-month-heading,body.theme-dark .vac-history-page .vac-history-row,body.theme-dark .vac-history-page>.vac-hint{border-color:#35475c}
 </style><style>
 nav button{flex:1;min-width:0;padding:5px 2px;font-size:10px;white-space:nowrap}nav:not([hidden]) button .navicon{font-size:25px;line-height:28px;display:block;margin-bottom:3px}
 .powered-by{background:linear-gradient(125deg,#071a3c,#164d93);color:#fff;border-radius:18px;padding:23px 18px;text-align:center;margin:12px 0 20px;box-shadow:0 8px 20px #0d2c5522}.powered-by span{display:block;font-size:11px;letter-spacing:3px;color:#a9c5eb;font-weight:750}.powered-by strong{display:block;margin-top:8px;font-size:23px;letter-spacing:.3px}
@@ -196,7 +226,7 @@ nav button{flex:1;min-width:0;padding:5px 2px;font-size:10px;white-space:nowrap}
 .door-nav{width:26px;height:26px;vertical-align:middle}.code-entry{background:#fff;border:1px solid #dce5f1;border-radius:16px;padding:17px;margin-top:15px}.code-entry h3{margin:0 0 7px}.code-entry p{font-size:12px;color:#667892;line-height:1.5}.code-entry input{width:100%;padding:12px;border:1px solid #cbd8ea;border-radius:10px;font-size:16px}.code-entry .button{margin-top:10px}.code-value{font-size:21px;font-weight:800;letter-spacing:1px;background:#edf4ff;border-radius:10px;padding:14px;margin:10px 0;overflow-wrap:anywhere}.code-actions{display:flex;gap:9px}.code-actions button{flex:1}.security-note{font-size:12px;color:#75511d;background:#fff7e7;padding:13px;border-radius:11px;margin-top:14px}.vault-banner{background:#eaf2ff;border:1px solid #c8dbf7;border-radius:15px;padding:14px;margin:14px 0;color:#153b70}.vault-banner p{font-size:12px;line-height:1.5;margin:8px 0 0}.simple-code{padding:20px}.simple-code h3{font-size:18px;color:#0b2c5b;margin-bottom:15px}.simple-code-row{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid #e7edf5;padding-top:15px}.simple-code-row span{font-size:13px;color:#697b96}.vault-panel{border:1px solid #dbe5f1;background:white;border-radius:18px;padding:18px;margin:15px 0}.vault-title{font-weight:800;color:#10315d;margin-bottom:10px}.vault-panel input{width:100%;border:1px solid #ccd8e8;border-radius:10px;padding:12px;margin:7px 0 14px;background:white;font-size:16px}.vault-panel label{display:block;font-size:13px;font-weight:650;margin-top:12px}.vault-panel .button{margin-top:6px}.vault-actions,.vault-place{display:flex;align-items:center;justify-content:space-between;gap:10px}.vault-actions span{font-size:12px;color:#45607e}.vault-delete,.vault-eye{border:1px solid #cbd8e8;background:#f4f7fc;border-radius:9px;padding:8px;color:#244b7c;font-size:12px}.vault-secret{font-weight:800;letter-spacing:1px;overflow-wrap:anywhere}.simple-code-row{flex-wrap:wrap;gap:10px}.vault-add{border-top:1px solid #e5edf6;margin-top:22px;padding-top:12px}.vault-add h3{font-size:17px}.version-tag{font-size:11px;color:#2367ad;vertical-align:middle;background:#e8f1ff;border:1px solid #c6daf4;border-radius:8px;padding:4px 7px}.vault-order{display:flex;gap:6px;align-items:center}.vault-order button{border:1px solid #cbd8e8;border-radius:9px;background:#f4f7fc;color:#244b7c;padding:8px 10px;font-size:14px;font-weight:700}.vault-order button:disabled{opacity:.3}.vault-order .vault-delete{font-size:11px;font-weight:500}.vault-place h3{margin:0}.vault-place{align-items:center;gap:8px}.simple-code{margin:10px 0}.about-inline-version{display:block;margin-top:5px;font-size:11px;letter-spacing:.04em;opacity:.68;font-weight:400}nav button[data-page="search"] .navicon{font-size:32px;line-height:28px}
 :root{--text-scale:1}body{font-size:calc(16px * var(--text-scale))}.item,.cat,.profile,.detail,.commune-card{box-shadow:0 4px 16px rgba(15,46,86,.08);transition:transform .16s,box-shadow .16s}button:active{transform:scale(.98)}.navicon{font-size:27px}#nav button:nth-child(2) .navicon{font-size:32px}.highlight{background:#ffe79c;color:#132b4d}.tools{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tools select,.tools button{border:1px solid #c9d6e5;border-radius:9px;padding:9px;background:#f5f8fc;color:#1b4069}.setting{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:14px 0}.setting select{padding:9px;border:1px solid #c9d6e5;border-radius:9px}.drag-grip{border:1px solid #cad8e8;border-radius:8px;padding:6px;touch-action:none;cursor:grab;background:#f6f9ff}body.dark-app{background:#0c1525!important;color:#e9f0fa!important}body.dark-app main,body.dark-app .vault-panel,body.dark-app .detail,body.dark-app .commune-card,body.dark-app .item,body.dark-app .cat,body.dark-app .profile{background:#182b42!important;color:#e9f0fa!important;border-color:#3c5571!important}body.dark-app .muted{color:#b7c9df!important}
 
-/* V5.6 — accueil généraliste, suivi des vacations et saisie rapide */
+/* V5.7 — accueil généraliste, suivi des vacations et saisie rapide */
 .car-nav,.door-nav{width:25px;height:25px;display:block;margin:auto}
 #nav button[data-page="search"] .navicon,#nav button:nth-child(2) .navicon{font-size:25px;display:flex;justify-content:center;align-items:center}
 .vac-card{background:linear-gradient(150deg,#fff,#f5f9ff);border:1px solid #dce6f3;border-radius:18px;padding:19px;margin:14px 0 16px;box-shadow:0 5px 22px #17365a0d}
@@ -222,10 +252,10 @@ body.theme-dark .vac-grid>div{background:#1b3049;border-color:#34465f}
 body.theme-dark .vac-grid small,body.theme-dark .vac-service{color:#9cacc0}
 
 
-/* V5.6 vacation théorique */
+/* V5.7 vacation théorique */
 .vac-modal{position:fixed;inset:0;z-index:9999;background:#0c1d36a8;display:flex;align-items:center;justify-content:center;padding:18px}.vac-dialog{background:#fff;color:#17365a;border-radius:20px;padding:23px;width:min(100%,440px);box-shadow:0 20px 60px #0004}.vac-dialog h2{margin:8px 0;font-size:22px}.vac-dialog label{display:block;font-size:12px;font-weight:700;margin:14px 0 6px}.vac-dialog input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #cbd7e5;border-radius:10px;background:#fff;color:#17365a;font:inherit;font-size:15px;margin-top:6px}.vac-times{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vac-skip{display:block;width:100%;margin-top:10px;padding:12px;border:0;background:transparent;color:#496987;font-weight:700;cursor:pointer}.vac-month{margin:20px 0}.vac-month h4{margin-bottom:8px;text-transform:capitalize}.vac-history-row>div:last-child{text-align:right}.vac-history-row small{display:block;margin-top:4px;color:#8090a3}.vac-history-page .vac-grid{margin:12px 0}.vac-pill.active{background:#e0f1ff;color:#155d91}body.theme-dark .vac-dialog{background:#172b44;color:#edf3fb}body.theme-dark .vac-dialog input{background:#203b59;color:#edf3fb;border-color:#45617e}
 
-/* V5.6 : champs horaires compacts et sans débordement */
+/* V5.7 : champs horaires compacts et sans débordement */
 .vac-dialog{box-sizing:border-box;max-width:calc(100vw - 36px)}
 .vac-times{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;min-width:0;width:100%}
 .vac-times label{min-width:0;max-width:100%;box-sizing:border-box}
@@ -237,7 +267,7 @@ html,body{touch-action:pan-x pan-y}
 </style><style>.codes-toolbar{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-weight:700;color:#183c69}.codes-menu{font-size:27px;line-height:22px;width:44px;height:40px;border:1px solid #cbd8e8;border-radius:12px;background:#f4f7fc;color:#173d6e}.commune-card{padding:15px}.commune-card h3{font-size:18px;margin:0}.access-line{border-top:1px solid #e7edf5;margin-top:12px;padding-top:12px}.access-line-main{display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap}.access-line-main strong{flex:1;min-width:70px}.access-edit{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap;margin-top:10px}.access-edit button,.codes-cancel{border:1px solid #cbd8e8;border-radius:9px;background:#f4f7fc;color:#244b7c;padding:8px 10px;font-size:12px}.access-edit button:disabled{opacity:.3}.add-line-btn{margin-top:14px;border:1px dashed #aac2e1;background:#f6f9ff;border-radius:10px;padding:11px;width:100%;font-weight:700;color:#245d9a}.codes-cancel{margin-left:8px}.vault-order button:disabled{opacity:.3}.codes-menu:has(+*){min-width:44px}.codes-toolbar:has([aria-expanded="true"]) .codes-menu{font-size:13px;width:auto;padding:0 12px;background:#173d6e;color:#fff}.vault-order{flex-wrap:wrap;justify-content:flex-end}.vault-order .vault-delete{border-color:#f0b5b5;color:#9a2525;background:#fff5f5}.about-inline-version{display:block;margin-top:5px;font-size:11px;letter-spacing:.04em;opacity:.68;font-weight:400}nav button[data-page="search"] .navicon{font-size:32px;line-height:28px}
 :root{--text-scale:1}body{font-size:calc(16px * var(--text-scale))}.item,.cat,.profile,.detail,.commune-card{box-shadow:0 4px 16px rgba(15,46,86,.08);transition:transform .16s,box-shadow .16s}button:active{transform:scale(.98)}.navicon{font-size:27px}#nav button:nth-child(2) .navicon{font-size:32px}.highlight{background:#ffe79c;color:#132b4d}.tools{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tools select,.tools button{border:1px solid #c9d6e5;border-radius:9px;padding:9px;background:#f5f8fc;color:#1b4069}.setting{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:14px 0}.setting select{padding:9px;border:1px solid #c9d6e5;border-radius:9px}.drag-grip{border:1px solid #cad8e8;border-radius:8px;padding:6px;touch-action:none;cursor:grab;background:#f6f9ff}body.dark-app{background:#0c1525!important;color:#e9f0fa!important}body.dark-app main,body.dark-app .vault-panel,body.dark-app .detail,body.dark-app .commune-card,body.dark-app .item,body.dark-app .cat,body.dark-app .profile{background:#182b42!important;color:#e9f0fa!important;border-color:#3c5571!important}body.dark-app .muted{color:#b7c9df!important}
 
-/* V5.6 — accueil généraliste, suivi des vacations et saisie rapide */
+/* V5.7 — accueil généraliste, suivi des vacations et saisie rapide */
 .car-nav,.door-nav{width:25px;height:25px;display:block;margin:auto}
 #nav button[data-page="search"] .navicon,#nav button:nth-child(2) .navicon{font-size:25px;display:flex;justify-content:center;align-items:center}
 .vac-card{background:linear-gradient(150deg,#fff,#f5f9ff);border:1px solid #dce6f3;border-radius:18px;padding:19px;margin:14px 0 16px;box-shadow:0 5px 22px #17365a0d}
@@ -263,10 +293,10 @@ body.theme-dark .vac-grid>div{background:#1b3049;border-color:#34465f}
 body.theme-dark .vac-grid small,body.theme-dark .vac-service{color:#9cacc0}
 
 
-/* V5.6 vacation théorique */
+/* V5.7 vacation théorique */
 .vac-modal{position:fixed;inset:0;z-index:9999;background:#0c1d36a8;display:flex;align-items:center;justify-content:center;padding:18px}.vac-dialog{background:#fff;color:#17365a;border-radius:20px;padding:23px;width:min(100%,440px);box-shadow:0 20px 60px #0004}.vac-dialog h2{margin:8px 0;font-size:22px}.vac-dialog label{display:block;font-size:12px;font-weight:700;margin:14px 0 6px}.vac-dialog input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #cbd7e5;border-radius:10px;background:#fff;color:#17365a;font:inherit;font-size:15px;margin-top:6px}.vac-times{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vac-skip{display:block;width:100%;margin-top:10px;padding:12px;border:0;background:transparent;color:#496987;font-weight:700;cursor:pointer}.vac-month{margin:20px 0}.vac-month h4{margin-bottom:8px;text-transform:capitalize}.vac-history-row>div:last-child{text-align:right}.vac-history-row small{display:block;margin-top:4px;color:#8090a3}.vac-history-page .vac-grid{margin:12px 0}.vac-pill.active{background:#e0f1ff;color:#155d91}body.theme-dark .vac-dialog{background:#172b44;color:#edf3fb}body.theme-dark .vac-dialog input{background:#203b59;color:#edf3fb;border-color:#45617e}
 
-/* V5.6 : champs horaires compacts et sans débordement */
+/* V5.7 : champs horaires compacts et sans débordement */
 .vac-dialog{box-sizing:border-box;max-width:calc(100vw - 36px)}
 .vac-times{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;min-width:0;width:100%}
 .vac-times label{min-width:0;max-width:100%;box-sizing:border-box}
@@ -288,7 +318,7 @@ html,body{touch-action:pan-x pan-y}
 .home-update button{white-space:nowrap;border:1px solid #b9d0eb;border-radius:8px;background:white;color:#154e92;padding:7px 9px;font-size:11px;font-weight:700}
 @media(prefers-color-scheme:dark){.header-version{background:#263e5b;color:#eaf2fc;border-color:#4d6580}.home-update{background:#203550;color:#eaf2fc;border-color:#425e7d}.home-update small{color:#c0cfe2}}
 
-/* V5.6 — accueil généraliste, suivi des vacations et saisie rapide */
+/* V5.7 — accueil généraliste, suivi des vacations et saisie rapide */
 .car-nav,.door-nav{width:25px;height:25px;display:block;margin:auto}
 #nav button[data-page="search"] .navicon,#nav button:nth-child(2) .navicon{font-size:25px;display:flex;justify-content:center;align-items:center}
 .vac-card{background:linear-gradient(150deg,#fff,#f5f9ff);border:1px solid #dce6f3;border-radius:18px;padding:19px;margin:14px 0 16px;box-shadow:0 5px 22px #17365a0d}
@@ -314,10 +344,10 @@ body.theme-dark .vac-grid>div{background:#1b3049;border-color:#34465f}
 body.theme-dark .vac-grid small,body.theme-dark .vac-service{color:#9cacc0}
 
 
-/* V5.6 vacation théorique */
+/* V5.7 vacation théorique */
 .vac-modal{position:fixed;inset:0;z-index:9999;background:#0c1d36a8;display:flex;align-items:center;justify-content:center;padding:18px}.vac-dialog{background:#fff;color:#17365a;border-radius:20px;padding:23px;width:min(100%,440px);box-shadow:0 20px 60px #0004}.vac-dialog h2{margin:8px 0;font-size:22px}.vac-dialog label{display:block;font-size:12px;font-weight:700;margin:14px 0 6px}.vac-dialog input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #cbd7e5;border-radius:10px;background:#fff;color:#17365a;font:inherit;font-size:15px;margin-top:6px}.vac-times{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vac-skip{display:block;width:100%;margin-top:10px;padding:12px;border:0;background:transparent;color:#496987;font-weight:700;cursor:pointer}.vac-month{margin:20px 0}.vac-month h4{margin-bottom:8px;text-transform:capitalize}.vac-history-row>div:last-child{text-align:right}.vac-history-row small{display:block;margin-top:4px;color:#8090a3}.vac-history-page .vac-grid{margin:12px 0}.vac-pill.active{background:#e0f1ff;color:#155d91}body.theme-dark .vac-dialog{background:#172b44;color:#edf3fb}body.theme-dark .vac-dialog input{background:#203b59;color:#edf3fb;border-color:#45617e}
 
-/* V5.6 : champs horaires compacts et sans débordement */
+/* V5.7 : champs horaires compacts et sans débordement */
 .vac-dialog{box-sizing:border-box;max-width:calc(100vw - 36px)}
 .vac-times{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;min-width:0;width:100%}
 .vac-times label{min-width:0;max-width:100%;box-sizing:border-box}
@@ -326,7 +356,7 @@ html,body{touch-action:pan-x pan-y}
 .vac-history-page{margin-top:14px}
 .vac-history-page .vac-month{margin:14px 0}
 .vac-history-page .vac-history-row{gap:10px}
-</style></head><body><div class="app"><div class="flag"><i></i><i></i><i></i></div><header><h1><span class="brandroad">◢</span>TACTIK <span class="header-version">V5.6</span></h1><small>INFRACTIONS ROUTIÈRES · AIDE À LA RECHERCHE</small></header><main class="body" id="main"></main><nav id="nav" hidden></nav></div><script>
+</style></head><body><div class="app"><div class="flag"><i></i><i></i><i></i></div><header><h1><span class="brandroad">◢</span>TACTIK <span class="header-version">V5.7</span></h1><small>INFRACTIONS ROUTIÈRES · AIDE À LA RECHERCHE</small></header><main class="body" id="main"></main><nav id="nav" hidden></nav></div><script>
 const records=[];let databaseReady=false,databaseError=false;
 const DB_KEY='natinf-route-database-v12',DB_META='natinf-route-database-meta-v12';
 const DATASET_URL='https://www.data.gouv.fr/api/1/datasets/liste-des-infractions-en-vigueur-de-la-nomenclature-natinf/';
@@ -512,7 +542,19 @@ function vacRender(){
  <button class="vac-skip vac-compact-history" data-vac-history="1">Historique · ${days} jours · ${vacHours(minutes)}</button>
  ${vacError?`<p class="mc-error">${escapeHtml(vacError)}</p>`:''}</section>`;
 }
-function vacHistoryRender(){const all=[...vacations].filter(v=>v.day&&v.from&&v.to).sort((a,b)=>b.day.localeCompare(a.day));const months=[...new Set(all.map(v=>v.day.slice(0,7)))];return `<section class="detail vac-history-page"><h3>Mes vacations</h3><p class="muted">${profile==='g'?'Gendarmerie nationale':'Police nationale'} · Horaires théoriques</p><div class="vac-grid"><div><small>Jours enregistrés</small><strong>${new Set(all.map(v=>v.day)).size}</strong></div><div><small>Heures prévues</small><strong>${vacHours(all.reduce((n,v)=>n+vacMinutes(v),0))}</strong></div></div>${months.map(month=>{const vs=all.filter(v=>v.day.startsWith(month)),[y,m]=month.split('-'),label=new Date(+y,+m-1,1).toLocaleDateString('fr-FR',{month:'long',year:'numeric'});return `<div class="vac-month"><h4>${escapeHtml(label)} · ${new Set(vs.map(v=>v.day)).size} jour(s) · ${vacHours(vs.reduce((n,v)=>n+vacMinutes(v),0))}</h4>${vs.map(v=>`<div class="vac-history-row"><div><strong>${vacDateLabel(v.day)}</strong><small>${escapeHtml(v.unit)}</small></div><div>${escapeHtml(v.from)}–${escapeHtml(v.to)}<br><strong>${vacHours(vacMinutes(v))}</strong></div></div>`).join('')}</div>`}).join('')||'<p class="muted">Aucune vacation enregistrée.</p>'}<p class="vac-hint">Suivi personnel indicatif, distinct des états de service officiels.</p></section>`}
+function vacHistoryRender(){
+ const all=[...vacations].filter(v=>v.day&&v.from&&v.to).sort((a,b)=>b.day.localeCompare(a.day)||b.from.localeCompare(a.from));
+ const months=[...new Set(all.map(v=>v.day.slice(0,7)))];
+ return `<section class="detail vac-history-page"><div class="vac-history-heading"><h3>Historique des vacations</h3><p class="muted">${profile==='g'?'Gendarmerie nationale':'Police nationale'} · Horaires théoriques</p></div>
+ <div class="vac-grid"><div><small>Jours travaillés</small><strong>${new Set(all.map(v=>v.day)).size}</strong></div><div><small>Heures prévues</small><strong>${vacHours(all.reduce((n,v)=>n+vacMinutes(v),0))}</strong></div></div>
+ ${months.map(month=>{const vs=all.filter(v=>v.day.startsWith(month)),[y,m]=month.split('-'),label=new Date(+y,+m-1,1).toLocaleDateString('fr-FR',{month:'long',year:'numeric'});return `<div class="vac-month"><div class="vac-month-heading"><h4>${escapeHtml(label)}</h4><span>${new Set(vs.map(v=>v.day)).size} j · ${vacHours(vs.reduce((n,v)=>n+vacMinutes(v),0))}</span></div><div class="vac-month-list">${vs.map(v=>`<div class="vac-history-row"><div class="vac-history-info"><strong>${vacDateLabel(v.day)}</strong><small>${escapeHtml(v.unit)}</small></div><div class="vac-history-times"><span>${escapeHtml(v.from)} – ${escapeHtml(v.to)}</span><strong>${vacHours(vacMinutes(v))}</strong></div><button type="button" class="vac-delete" data-vac-delete="${escapeHtml(v.id)}" aria-label="Supprimer la vacation du ${vacDateLabel(v.day)}" title="Supprimer cette vacation"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6m5 4v6m4-6v6"/></svg></button></div>`).join('')}</div></div>`}).join('')||'<p class="vac-history-empty">Aucune vacation enregistrée pour le moment.</p>'}
+ <p class="vac-hint">Suivi personnel indicatif, distinct des états de service officiels.</p></section>`;
+}
+function vacDelete(id){
+ const v=vacations.find(x=>x.id===id);if(!v)return;
+ if(!confirm(`Supprimer la vacation du ${vacDateLabel(v.day)} (${v.from} – ${v.to}) ?\nCette action est définitive.`))return;
+ if(vacStore(vacations.filter(x=>x.id!==id)))render();
+}
 
 
 let mcActiveProfile=null;
@@ -551,7 +593,7 @@ function render(){
   return;
  }
  if(page==='vacations'){main.innerHTML=top+`<button class="back" data-page="dashboard">← Retour à l’accueil</button>${vacHistoryRender()}`;return}
- if(page==='about'){main.innerHTML=top+`<h2>À propos</h2><div class="powered-by"><span>POWERED BY</span><strong>Charles CABELLO</strong><span class="about-inline-version">Version V5.6</span></div>${vacHistoryRender()}<div class="detail"><h3>TACTIK</h3><p>Référentiel importé : <strong>${escapeHtml(dbMeta.sourceTitle)}</strong>.</p><p>${count.toLocaleString('fr-FR')} références issues du fichier fourni. La rubrique Route utilise un classement indicatif par mots-clés ; la recherche « Tous les NATINF » couvre l’ensemble du fichier.</p><p>Les favoris sont conservés lors des mises à jour sur la même origine Netlify (sans effacer les données Safari). La base est enregistrée dans les fichiers de l’application et mise en cache pour consultation hors ligne après le premier chargement complet.</p><p>La nomenclature ne contient ni montants individualisés ni retraits de points. Les retraits de points vérifiés sont ajoutés pour une sélection de NATINF, sans extrapolation. Vérifiez les textes en vigueur et la situation juridique avant toute verbalisation.</p></div><section class="settings-card"><h3>Paramètres</h3><div class="setting"><label>Apparence</label><select id="pref-theme"><option value="auto" ${editPrefs().theme==='auto'?'selected':''}>Automatique</option><option value="light" ${editPrefs().theme==='light'?'selected':''}>Clair</option><option value="dark" ${editPrefs().theme==='dark'?'selected':''}>Sombre</option></select></div><div class="setting"><label>Taille du texte</label><select id="pref-scale">${[85,100,110,120].map(n=>`<option value="${n}" ${editPrefs().scale===n?'selected':''}>${({85:'Très petit',100:'Petit',110:'Moyen',120:'Grand'})[n]}</option>`).join('')}</select></div><div class="setting"><label>Déconnexion après</label><select id="pref-idle">${[[60,'1 minute'],[120,'2 minutes'],[300,'5 minutes']].map(([n,l])=>`<option value="${n}" ${editPrefs().idle===n?'selected':''}>${l}</option>`).join('')}</select></div><button class="button save-settings" data-save-settings>Enregistrer les paramètres</button><p class="muted" id="settings-message" role="status"></p><div class="connection-actions"><p id="online-status" class="muted">${navigator.onLine?'<span class="connection-dot online">●</span> Connecté':'<span class="connection-dot offline">●</span> Hors ligne'}</p><button class="button logout-settings" data-page="home">Se déconnecter</button></div><button class="button check-update-settings" data-check-app>↻ Vérifier la mise à jour de l’application</button></section>${status}`;return}
+ if(page==='about'){main.innerHTML=top+`<div class="about-layout"><h2>À propos</h2><div class="powered-by"><span>POWERED BY</span><strong>Charles CABELLO</strong><span class="about-inline-version">Version V5.7</span></div>${vacHistoryRender()}<div class="detail"><h3>TACTIK</h3><p>Référentiel importé : <strong>${escapeHtml(dbMeta.sourceTitle)}</strong>.</p><p>${count.toLocaleString('fr-FR')} références issues du fichier fourni. La rubrique Route utilise un classement indicatif par mots-clés ; la recherche « Tous les NATINF » couvre l’ensemble du fichier.</p><p>Les favoris sont conservés lors des mises à jour sur la même origine Netlify (sans effacer les données Safari). La base est enregistrée dans les fichiers de l’application et mise en cache pour consultation hors ligne après le premier chargement complet.</p><p>La nomenclature ne contient ni montants individualisés ni retraits de points. Les retraits de points vérifiés sont ajoutés pour une sélection de NATINF, sans extrapolation. Vérifiez les textes en vigueur et la situation juridique avant toute verbalisation.</p></div><section class="settings-card"><h3>Paramètres</h3><div class="setting"><label>Apparence</label><select id="pref-theme"><option value="auto" ${editPrefs().theme==='auto'?'selected':''}>Automatique</option><option value="light" ${editPrefs().theme==='light'?'selected':''}>Clair</option><option value="dark" ${editPrefs().theme==='dark'?'selected':''}>Sombre</option></select></div><div class="setting"><label>Taille du texte</label><select id="pref-scale">${[85,100,110,120].map(n=>`<option value="${n}" ${editPrefs().scale===n?'selected':''}>${({85:'Très petit',100:'Petit',110:'Moyen',120:'Grand'})[n]}</option>`).join('')}</select></div><div class="setting"><label>Déconnexion après</label><select id="pref-idle">${[[60,'1 minute'],[120,'2 minutes'],[300,'5 minutes']].map(([n,l])=>`<option value="${n}" ${editPrefs().idle===n?'selected':''}>${l}</option>`).join('')}</select></div><button class="button save-settings" data-save-settings>Enregistrer les paramètres</button><p class="muted" id="settings-message" role="status"></p><div class="connection-actions"><p id="online-status" class="muted">${navigator.onLine?'<span class="connection-dot online">●</span> Connecté':'<span class="connection-dot offline">●</span> Hors ligne'}</p><button class="button logout-settings" data-page="home">Se déconnecter</button></div><button class="button check-update-settings" data-check-app>↻ Vérifier la mise à jour de l’application</button></section></div>${status}`;return}
  if(page==='dashboard'){main.innerHTML=top+`<h2 class="dash-title">Accueil</h2><p class="muted dash-sub">Espace de vacation et notes d’intervention</p>${vacRender()}${mcRender()}`;return}
  const q=normalizeText(query.trim());
  let list=records.filter(r=>(page!=='favorites'||favs.includes(r.id))&&(!onlyRoad||page==='favorites'||r.road)&&(!cat||cat==='Infractions courantes'||r.cat===cat)&&(!q||normalizeText(r.id+' '+r.title+' '+r.nature+' '+r.defined+' '+r.punished).includes(q)));
@@ -560,11 +602,12 @@ function render(){
  main.innerHTML=top+`<h2>${page==='favorites'?'Mes favoris':'Recherche NATINF'}</h2>${page==='favorites'?'':status}${page==='search'?`<div class="recent-box"><h3>Derniers consultés</h3><div class="recent-row">${recentCards()||'<span class="muted">Tes dernières consultations apparaîtront ici.</span>'}</div></div><div class="search-autocomplete"><input id="query" class="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="natinf-suggestions" aria-expanded="${query.trim().length>=2}" placeholder="Numéro NATINF, infraction, article…" value="${escapeHtml(query)}"><div id="natinf-suggestions" class="natinf-suggestion-popup" role="listbox" ${query.trim().length<2?'hidden':''}>${records.filter(r=>query.trim().length>=2&&normalizeText(r.id+' '+r.title).includes(normalizeText(query))).slice(0,6).map(r=>`<button type="button" role="option" data-suggestion="${escapeHtml(r.id)}"><span class="suggestion-id">NATINF ${escapeHtml(r.id)}</span><span class="suggestion-title">${escapeHtml(r.title.slice(0,115))}</span></button>`).join('')}</div></div><div class="scope"><button class="${onlyRoad?'selected':''}" data-scope="road">Code de la route</button></div>${onlyRoad?`<div class="categories">${categories.map(([n,ic])=>`<button class="cat ${cat===n?'selected':''}" data-cat="${escapeHtml(n)}"><span>${ic}</span>${escapeHtml(n)}</button>`).join('')}</div>`:''}`:''}<div class="tools">${page==='favorites'?'':`<select id="filter-class"><option value="">Toutes les classes</option>${['Contravention de classe 1','Contravention de classe 2','Contravention de classe 3','Contravention de classe 4','Contravention de classe 5','Délit'].map(v=>`<option value="${v}" ${filterClass===v?'selected':''}>${v}</option>`).join('')}</select>`}<select id="filter-points"><option value="">Tous les points</option><option value="verified" ${filterPoints==='verified'?'selected':''}>Points vérifiés</option><option value="unverified" ${filterPoints==='unverified'?'selected':''}>Points à vérifier</option></select>${page==='favorites'?'':`<select id="sort-results"><option value="default">Ordre initial</option><option value="id" ${sortMode==='id'?'selected':''}>Numéro NATINF</option><option value="title" ${sortMode==='title'?'selected':''}>Intitulé A–Z</option></select>`}</div><h3 class="sectiontitle">${page==='favorites' ?'Infractions enregistrées':'Résultats'} (${total.toLocaleString('fr-FR')})</h3><div id="results">${list.map(r=>`<div class="item"><div class="itemmain" data-detail="${r.id}"><strong>${highlightTerm(r.title,query)}</strong><small>NATINF ${r.id} · ${escapeHtml(r.nature)}</small></div>${page==='favorites'?`<div class="favorite-order"><button data-move-fav="${r.id}" data-direction="up" ${favs.indexOf(r.id)===0?'disabled':''} aria-label="Monter ce favori">↑</button><button data-move-fav="${r.id}" data-direction="down" ${favs.indexOf(r.id)===favs.length-1?'disabled':''} aria-label="Descendre ce favori">↓</button></div>`:''}<button class="star ${favs.includes(r.id)?'on':''}" data-fav="${r.id}" aria-label="Favori">★</button></div>`).join('')||'<p class="muted">Aucun résultat.</p>'}</div>${total>list.length?`<button class="button more" data-more="1">Afficher davantage (${total-list.length} restants)</button>`:''}<div class="warning">Classement routier indicatif. Les qualifications et références doivent être vérifiées avant verbalisation.</div>`;
 }
 document.addEventListener('click',async e=>{
- const b=e.target.closest('[data-vac-save],[data-vac-dismiss],[data-vac-edit],[data-vac-new],[data-vac-history],[data-mc-add],[data-mc-expand],[data-mc-kind],[data-mc-copy]');if(!b)return;
+ const b=e.target.closest('[data-vac-save],[data-vac-dismiss],[data-vac-delete],[data-vac-edit],[data-vac-new],[data-vac-history],[data-mc-add],[data-mc-expand],[data-mc-kind],[data-mc-copy]');if(!b)return;
  e.preventDefault();e.stopImmediatePropagation();
  if(b.dataset.vacSave!==undefined){vacSave(b.dataset.vacSave);return}
  if(b.dataset.vacDismiss!==undefined){document.getElementById('vac-modal')?.remove();return}
- if(b.dataset.vacEdit!==undefined){vacShowModal(b.dataset.vacEdit);return}
+ if(b.dataset.vacDelete!==undefined){vacDelete(b.dataset.vacDelete);return}
+  if(b.dataset.vacEdit!==undefined){vacShowModal(b.dataset.vacEdit);return}
  if(b.dataset.vacNew!==undefined){vacShowModal();return}
  if(b.dataset.vacHistory!==undefined){page='vacations';render();return}
  if(b.dataset.mcAdd!==undefined){await mcAdd();return}

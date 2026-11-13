@@ -11,3 +11,5 @@ V5.4 : declaration de vacation theorique a la connexion, service libre, horaires
 V5.6 : nouveau nom TACTIK, champs horaires adaptes aux petits ecrans, zoom tactile desactive, historique des vacations directement sous Powered by dans A propos. Stockages existants preserves.
 
 V5.6 : vacation compacte, horaires adaptes et point vert actif pendant les heures theoriques.
+
+V5.7 : harmonisation A propos, historique des vacations en lignes fines, suppression avec confirmation.
