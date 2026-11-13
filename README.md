@@ -8,4 +8,6 @@ V5.3 : Accueil généraliste, suivi des vacations par profil avec début/fin et 
 
 V5.4 : declaration de vacation theorique a la connexion, service libre, horaires, historique mensuel.
 
-V5.5 : nouveau nom TACTIK, champs horaires adaptes aux petits ecrans, zoom tactile desactive, historique des vacations directement sous Powered by dans A propos. Stockages existants preserves.
+V5.6 : nouveau nom TACTIK, champs horaires adaptes aux petits ecrans, zoom tactile desactive, historique des vacations directement sous Powered by dans A propos. Stockages existants preserves.
+
+V5.6 : vacation compacte, horaires adaptes et point vert actif pendant les heures theoriques.
