@@ -1,0 +1,17 @@
+TACTIK V5.6 — correctif pour la version V5.5
+
+Ce ZIP est un CORRECTIF, pas une archive complète de l'application.
+
+1. Décompressez votre dossier TACTIK V5.5.
+2. Copiez appliquer_correctif.py dans le même dossier que index.html.
+3. Lancez : python appliquer_correctif.py
+4. Vérifiez la page sur iPhone avant de publier les fichiers.
+
+Modifications :
+- champs horaires plus petits et espacés ;
+- encadré de vacation compact sur l'accueil ;
+- point vert clignotant doucement uniquement pendant les horaires théoriques ;
+- horaires, date, service et bouton Modifier conservés ;
+- aucun changement des clés de stockage des favoris et vacations.
+
+La version complète V5.6 exige l'archive source V5.5.
