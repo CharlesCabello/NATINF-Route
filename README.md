@@ -3,3 +3,7 @@ NATINF Route V39 — mises à jour automatiques. Publier index.html, sw.js et to
 V5.1 : Carnet d’intervention sur l’accueil, notes horodatées et chiffrées localement par profil avec phrase secrète indépendante. Publication manuelle requise tant que GitHub refuse les écritures.
 
 V5.2 : main courante à saisie directe, sans mot de passe ni chiffrement supplémentaire. Les notes V5.1 chiffrées ne sont pas effacées mais ne sont pas importées automatiquement.
+
+V5.3 : Accueil généraliste, suivi des vacations par profil avec début/fin et décompte des jours, main courante agrandie, Derniers consultés dans NATINF, navigation voiture.
+
+V5.4 : declaration de vacation theorique a la connexion, service libre, horaires, historique mensuel.
