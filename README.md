@@ -13,3 +13,5 @@ V5.6 : nouveau nom TACTIK, champs horaires adaptes aux petits ecrans, zoom tacti
 V5.6 : vacation compacte, horaires adaptes et point vert actif pendant les heures theoriques.
 
 V5.7 : harmonisation A propos, historique des vacations en lignes fines, suppression avec confirmation.
+
+TACTIK V5.8: nouvelle fenetre de vacation compacte, heures espacees, titre simplifie. Correction de la persistance des vacations.
