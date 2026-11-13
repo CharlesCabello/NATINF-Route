@@ -7,3 +7,5 @@ V5.2 : main courante à saisie directe, sans mot de passe ni chiffrement supplé
 V5.3 : Accueil généraliste, suivi des vacations par profil avec début/fin et décompte des jours, main courante agrandie, Derniers consultés dans NATINF, navigation voiture.
 
 V5.4 : declaration de vacation theorique a la connexion, service libre, horaires, historique mensuel.
+
+V5.5 : nouveau nom TACTIK, champs horaires adaptes aux petits ecrans, zoom tactile desactive, historique des vacations directement sous Powered by dans A propos. Stockages existants preserves.
