@@ -16,4 +16,4 @@ V5.7 : harmonisation A propos, historique des vacations en lignes fines, suppres
 
 TACTIK V5.8: nouvelle fenetre de vacation compacte, heures espacees, titre simplifie. Correction de la persistance des vacations.
 
-V6.2: liens locaux, mode service, export AES-GCM et restauration des deux profils. Export manuel, aucun serveur configure.
+V6.3: liens locaux, mode service, export AES-GCM et restauration des deux profils. Export manuel, aucun serveur configure.
