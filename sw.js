@@ -1,5 +1,5 @@
-const CACHE='natinf-route-v59';
-const ASSETS=['./index.html','./manifest.webmanifest','./icon.svg','./gyrophare.jpg','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./natinf-octobre2026.json'];
+const CACHE='natinf-route-v60';
+const ASSETS=['./index.html','./manifest.webmanifest','./icon.svg','./tactik-logo.png','./gyrophare.jpg','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./natinf-octobre2026.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('natinf-route-v')&&k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);if(u.origin!==self.location.origin)return;
